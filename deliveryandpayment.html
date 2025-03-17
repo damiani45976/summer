@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .scroll-top {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          display: none;
+          padding: 15px;
+          background: white;
+          color: black;
+          border: none;
+          border-radius: 50%;
+          cursor: pointer;
+          font-size: 20px;
+          opacity: 0.8;
+          transition: opacity 0.3s;
+      }
+      .scroll-top:hover {
+          opacity: 1;
+      }
+      .show {
+          display: block;
+      }
+  </style>
+</head>
+<body>
+<button class="scroll-top" onclick="topFunction()" title="Наверх">▲</button>
+<script>
+  window.onscroll = function() {
+      scrollFunction();
+  };
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.querySelector(".scroll-top").classList.add("show");
+      } else {
+          document.querySelector(".scroll-top").classList.remove("show");
+      }
+  }
+  function topFunction() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+</script>
+<header>
+    <div class="logo">
+    <a href="index.html"> <h1> Trouble </h1> </a>
+    <img src="resources/Vector (2).svg" alt="logo">
+    </div>
+</header>
+<nav class="navbar navbar-expand-lg bg-white">
+  <div class="gpsone">
+   <p> Ваш город Калуга. <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdropgps"> Изменить? </a> </p>
+  </div>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="news.html"> Новости </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Обувь
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"> Вся обувь </a></li>
+            <li><a class="dropdown-item" href="#"> Ботфорды </a></li>
+            <li><a class="dropdown-item" href="#"> Ботинки </a></li>
+            <li><a class="dropdown-item" href="#"> Казаки </a></li>
+            <li><a class="dropdown-item" href="#"> Полусапоги </a></li>
+            <li><a class="dropdown-item" href="#"> Угги </a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Сумки
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"> Все сумки </a></li>
+            <li><a class="dropdown-item" href="#"> Большие сумки </a></li>
+            <li><a class="dropdown-item" href="#"> Клатчи </a></li>
+            <li><a class="dropdown-item" href="#"> Мини-сумки  </a></li>
+            <li><a class="dropdown-item" href="#"> Рюкзаки </a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Аксессуары
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"> Все аксессуары </a></li>
+            <li><a class="dropdown-item" href="#"> Варежки </a></li>
+            <li><a class="dropdown-item" href="#"> Перчатки </a></li>
+            <li><a class="dropdown-item" href="#"> Шарфы </a></li>
+            <li><a class="dropdown-item" href="#"> Цепи </a></li>
+            <li><a class="dropdown-item" href="#"> Зонты </a></li>
+            <li><a class="dropdown-item" href="#"> Кольца </a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Капсулы
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"> Все капсулы </a></li>
+            <li><a class="dropdown-item" href="#"> SUSTAINABILT </a></li>
+            <li><a class="dropdown-item" href="#"> Коллекция Trouble </a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Уход за обувью
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"> Крема для обуви </a></li>
+            <li><a class="dropdown-item" href="#"> Салфетки </a></li>
+            <li><a class="dropdown-item" href="#"> Спреи</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sale.html"> Распродажа </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="icontwo">
+    <a href="favourites.html"> <img src="resources/Vector (5).svg" alt="svg"> </a>
+    <a href="#"> <img src="resources/Vector (4).svg" alt="svg" data-bs-toggle="modal" data-bs-target="#staticBackdropfind"> </a>
+    <a href="basket.html"> <img src="resources/Vector (3).svg" alt="svg"> </a>
+    <a href="#"> <img src="resources/prof.svg" alt="svg" data-bs-toggle="modal" data-bs-target="#staticBackdropautoriz"> </a>
+  </div>
+</nav>
+<div class="deliveryone"> <h3 style="text-align: center;"> ДОСТАВКА И ОПЛАТА </h3>
+<br>
+<p style="text-align: center;"> Мы доставляем ваши заказы по всей территории России. В зависимости от региона получения заказа вам будут доступны определенные виды доставки.
+
+    Итоговая стоимость и доступные варианты доставки и оплаты будут отображены при оформлении заказа. </p> 
+</div>
+<section class="deliverytwo">
+<hr>
+<h5> Какие есть варианты доставки и получения заказа? </h5>
+<p> В зависимости от региона получения заказа вам будут доступны определенные виды доставки: курьерская доставка с примеркой и частичным выкупом, доставка в постамат или пункт выдачи, самовывоз из магазина, экспресс-доставка из магазина.</p>
+<hr>
+<h5>Где я могу увидеть статус моего заказа?
+</h5>
+<p> Статус заказа вы можете посмотреть в личном кабинете. С момента передачи заказа в курьерскую службу вы можете отслеживать заказ на сайте курьерской компании по ссылке, которую вы получите в СМС-сообщении.</p>
+<hr>
+<h5> У вас есть бесплатная доставка? </h5>
+<p> Мы предоставляем бесплатную доставку только для заказов, оформленных с самовывозом из магазина. </p>
+<hr>
+<h5> Какой будет стоимость и срок доставки заказа? </h5>
+<p> Стоимость и срок доставки зависит от региона и объема (вес и габариты) заказа. Итоговая стоимость и срок доставки будут отображены вам при оформлении заказа. </p>
+<hr>
+<h5> Если я выкуплю часть заказа, то сколько будет стоить доставка? </h5>
+<p> Вам нужно будет оплатить полную стоимость доставки, даже если вы выкупаете только часть заказа. </p>
+<hr>
+<h5> Если я откажусь от заказа, то сколько будет стоить доставка? </h5>
+<p> При полном отказе от заказа (курьерская доставка с примеркой и частичным выкупом) вы не оплачиваете стоимость доставки. </p>
+<hr>
+<h5> Когда вернутся деньги, если я ничего не выкуплю или выкуплю часть заказа в предоплаченном заказе? </h5>
+<p> Если ваш заказ был предоплачен, а вы отказались от него полностью или частично, мы вернем необходимую сумму в течение 2 (двух) рабочих дней после получения информации об отказе. Срок зачисления возврата на карту зависит от условий вашего банка и может занять до 30 дней. </p>
+<hr>
+<h5> Есть ли доставка заказа в выходные и в конкретное время? </h5>
+<p> Если вы выбрали курьерскую доставку, то вы можете ознакомиться с условиями выбранной компании в вашем регионе - нажмите на знак «информация» после того, как вы выбрали курьерскую службу. После поступления заказа в курьерскую службу вы получите СМС-сообщение с номером посылки и ссылкой для отслеживания. По ссылке вы можете выбрать дату, день недели и временной интервал доставки из вариантов, доступных в вашем населенном пункте. 
+</p>
+<hr>
+<h5> Если я не могу быть на месте во время приезда курьера, что делать? </h5>
+<p> Если вы не можете принять заказ в оговоренное время, вы можете изменить дату и время доставки по ссылке трек-кода, которую вы получили в СМС-сообщении от курьерской службы. Обратите внимание, изменить временной интервал не получится в сам день доставки. </p>
+<hr>
+<h5> Мне не хватило времени на примерку, что делать? </h5>
+<p> Если вы оформили заказ с примеркой и частичным выкупом, то на примерку у вас будет 15 минут вне зависимости от количества товаров в заказе. К сожалению, курьер не сможет ждать дольше. Вы можете выкупить предварительно понравившиеся вам модели, завершить примерку в спокойной обстановке, а далее вернуть модели, если решите от них отказаться.</p>
+</section>
+<footer>
+    <div class="onefooter">
+     <h1> Trouble </h1>
+    </div>
+    <div class="twofooter">
+      <ul class="onetolk">
+        <a href="news.html"> <li> <p> Новости </p> </li> </a>
+        <a href="aboutus.html"> <li> <p> О нас </p> </li> </a>
+        <a href="profile.html"> <li> <p> Профиль </p> </li> </a>
+        <a href="deliveryandpayment.html"> <li> <p> Доставка и оплата </p> </li> </a>
+      </ul>
+      <ul class="freetolk"> 
+        <a href=""> <li> <p> Клиентам </p> </li> </a>
+        <a href="question.html"> <li> <p> Вопросы и ответы </p> </li> </a>
+        <a href=""> <li> <p> Программы лояльности </p> </li> </a>
+        <a href=""> <li> <p> Подарочные карты </p> </li> </a>
+      </ul>
+    </div>
+    <div class="threefooter">
+      <p> Подпишитесь на обзоры коллекций, модные образы, советы экспертов. </p>
+      <form class="emaillistone" action="/search" method="POST"> 
+        <label for="name">  </label>
+        <input type="text" id="name" placeholder="E-mail*">
+    </form>
+    <button class="btn_send"> <p> Подписаться</p> </button>
+    </div>
+  </footer>
+  <div class="onac">
+  <p> 2006-2024 Trouble &#169; </p>
+  <a href="https://vk.com/feed"> <p> Вконтакте </p> </a>
+  <a href="https://www.youtube.com/"> <p> Youtube </p> </a>
+  <a href="https://ok.ru/"> <p> Одноклассники </p> </a>
+  <a href="https://ru.pinterest.com/"> <p> Pinterest </p> </a>
+  <a href="https://web.telegram.org/k/"> <p> Telegram </p> </a>
+  </div>
+  <div class="modal fade" id="staticBackdropfind" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+        <div class="findto">
+          <form class="findto" action="/search" method="POST"> 
+            <label for="name"> </label>
+            <input type="text" id="name" placeholder="Поиск">
+            <button class="btnfindto"> <a href="#"> Найти </a> </button>
+        </div>
+        <button class="btnfindno" type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Закрыть </button>
+        </div>
+        <div class="modal-bodyone">
+        <div class="chastoishyt">
+        <p style="color:gray"> Часто ищут </p>
+        <p> лоферы &#128270 </p>
+        <p> ботинки &#128270 </p>
+        <p> босоножки &#128270 </p>
+        </div>
+        <div class="findimgone">
+        10990р.
+        </div>
+        <div class="findimgtwo">
+        22990р.
+        </div>
+        <div class="findimgthree">
+        13800р.
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdropautoriz" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"> <h3 style="text-align: center;"> <img src="resources/Vector (2).svg" alt="svg"> Войти в профиль </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Адрес электронной почты:</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Пароль:</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1"> Запомнить меня</label>
+            </div>
+          </form>
+          <div class="tat">
+            <p> Впервые у нас? <a href="staticBackdropregister" data-bs-toggle="modal" data-bs-target="#staticBackdropregister"> Зарегистрируйся! </a> </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-danger"> <a href="index.html"> Войти </a> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdropregister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"> <h3 style="text-align: center;"> <img src="resources/Vector (2).svg" alt="svg"> Регистрация </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"> ФИО*</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text"> Вводите ФИО полностью. </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"> Электронная почта*</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Пароль*</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1"> Подписаться на новости и скидки </label>
+            </div>
+          </form>
+          <div class="tat">
+            <p> Нажимая «Зарегистрироваться», вы соглашаетесь с  <a href="#"> публичной офертой </a> </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Закрыть </button>
+          <button type="button" class="btn btn-danger"> <a href="index.html"> Зарегистрироваться </a> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdropgps" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-headergps">
+      <h4 style="text-align: center;"> Ваш город КАЛУГА </h4>
+      <p style="text-align: center;"> Города, в которых присутствуют магазины Troumble</p>
+      <div class="findtree">
+        <form class="findto" action="/search" method="POST"> 
+          <label for="name"> </label>
+          <input type="text" id="name" placeholder="Поиск">
+          <button class="btnfindto"> <a href="#"> Найти </a> </button>
+          <button class="btnfindno" type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Закрыть </button>
+      </div>
+      </div>
+      <div class="modal-bodytwo">
+      <ul class="findgps">
+      <li> Москва </li>
+      <li> Тула </li>
+      <li> Тверь </li>
+      <li> Ярославль </li>
+      <li> Киров </li>
+      <li> Санкт-Петербур </li>
+      <li> Омск </li>
+      <li> Рязань </li>
+      </ul>
+      <ul class="findgpstwo">
+        <li> Иваново </li>
+        <li> Ижевск </li>
+        <li> Иркутск </li>
+        <li> Казань </li>
+        <li> Калининград </li>
+        <li> Калуга</li>
+        <li> Кемерово </li>
+        <li> Кисловодск </li>
+        </ul>
+        <ul class="findgpstree">
+          <li> Оренбург </li>
+          <li> Пенза </li>
+          <li> Пермь </li>
+          <li> Петрозаводск </li>
+          <li> Ростов-на-Дону </li>
+          <li> Самара </li>
+          <li> Саратов </li>
+          <li> Симферополь </li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
