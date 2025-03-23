@@ -14,3 +14,8 @@ function topFunction() {
         behavior: 'smooth'
     });
 }
+
+const myModal = bootstrap.Modal.getInstance(document.getElementById('staticBackdropautoriz'));
+myModal.hide();
+
+//data-bs-dismiss="modal"
